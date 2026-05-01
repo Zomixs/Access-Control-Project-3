@@ -25,6 +25,11 @@ void decryptTest() {
     system("./user_decrypt");
 }
 
+void cleanup() {
+    system("rm -f *.pem *.bin *.key *.enc *_ca.txt generate_users encrypt_shared_key encrypt_file user_decrypt");
+    std::cout << "cleaned up files\n";
+}
+
 int main() {
 
     int choice;
@@ -34,11 +39,13 @@ int main() {
         std::cout << "\n----------------------\n";
         std::cout << "ABAC MENU\n";
         std::cout << "----------------------\n";
-        std::cout << "1. generate users\n";
-        std::cout << "2. encrypt shared key\n";
-        std::cout << "3. encrypt file\n";
-        std::cout << "4. decrypt test\n";
-        std::cout << "5. exit\n";
+        std::cout << "1. Generate users\n";
+        std::cout << "2. Encrypt Shared Key\n";
+        std::cout << "3. Encrypt File\n";
+        std::cout << "4. Decrypt Test\n";
+        std::cout << "5. Cleanup Files\n";
+        std::cout << "6. Exit\n";
+        
         std::cout << "choice: ";
         std::cin >> choice;
 
@@ -54,12 +61,15 @@ int main() {
         else if (choice == 4) {
             decryptTest();
         }
-        else if (choice == 5) {
-            std::cout << "exiting...\n";
+        else if (choice == 6) {
+            std::cout << "Exiting...\n";
             break;
         }
+        else if (choice == 5) {
+    cleanup();
+}
         else {
-            std::cout << "invalid input\n";
+            std::cout << "Invalid input\n";
         }
     }
 
