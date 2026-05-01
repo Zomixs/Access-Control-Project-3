@@ -1,2 +1,0 @@
-This is the secret document protected by ABAC.
-Only authorized users should be able to read this.
