@@ -46,7 +46,7 @@ int main() {
         std::cout << "5. Cleanup Files\n";
         std::cout << "6. Exit\n";
         
-        std::cout << "choice: ";
+        std::cout << "Choice: ";
         std::cin >> choice;
 
         if (choice == 1) {
