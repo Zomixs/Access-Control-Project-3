@@ -1,0 +1,2 @@
+This is a secret message for the ABAC system.
+Only authorized users should read this.
